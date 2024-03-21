@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:padding="@dimen/space_12"
+    tools:context=".ui.doctor.QuizActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_page_create_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:text="@string/create_quiz"
+        android:textColor="@color/light"
+        android:textSize="@dimen/text_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/enter_question"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:layout_constraintTop_toBottomOf="@id/title_page_create_quiz">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/one"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/choose_one"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/check_box_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/one"
+        app:layout_constraintStart_toEndOf="@id/one"
+        app:layout_constraintTop_toTopOf="@id/one" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/two"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/choose_two"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/check_box_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/two"
+        app:layout_constraintEnd_toStartOf="@id/two"
+        app:layout_constraintTop_toTopOf="@id/two" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/three"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/choose_three"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/two">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/check_box_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/three"
+        app:layout_constraintStart_toEndOf="@id/three"
+        app:layout_constraintTop_toTopOf="@id/three" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/four"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/choose_two"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/three">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/check_box_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/four"
+        app:layout_constraintEnd_toStartOf="@id/four"
+        app:layout_constraintTop_toTopOf="@id/four" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_12"
+        android:backgroundTint="@color/secondary"
+        android:drawableTop="@drawable/ic_next_plan_24"
+        android:drawableTint="@color/background_primary"
+        android:text="@string/next_question"
+        android:textColor="@color/background_primary"
+        app:cornerRadius="@dimen/space_16"
+        app:layout_constraintBottom_toTopOf="@id/btn_upload_file"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/four" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_upload_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_12"
+        android:backgroundTint="@color/primary"
+        android:drawableTop="@drawable/ic_upload_24"
+        android:text="@string/upload_assignment"
+        android:textColor="@color/light"
+        android:textSize="@dimen/text_16"
+        app:cornerRadius="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_next_question" />
+</androidx.constraintlayout.widget.ConstraintLayout>

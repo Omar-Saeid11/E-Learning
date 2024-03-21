@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ELearning" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.ELearning" parent="Base.Theme.ELearning" />
+
+    <style name="education_a">
+        <item name="android:textSize">@dimen/text_32</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/light</item>
+    </style>
+
+    <style name="create_an_a">
+        <item name="android:textSize">@dimen/text_24</item>
+        <item name="android:textColor">@color/light</item>
+    </style>
+
+    <style name="a_handful_o">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">@color/light</item>
+    </style>
+    <style name="forgot_pass">
+        <item name="android:textSize">14.03sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#E4F1F8</item>
+    </style>
+    <style name="CircleShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">25dp</item>
+    </style>
+
+</resources>

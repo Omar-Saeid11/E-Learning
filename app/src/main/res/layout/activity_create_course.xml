@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:padding="@dimen/space_12"
+    tools:context=".ui.doctor.CreateCourse">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/back"
+        android:layout_width="32dp"
+        android:layout_height="64dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/new_course"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/secondary"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/back" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/new_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:background="@drawable/background_new_course"
+        android:padding="@dimen/space_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="28dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_create_new_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/create_new_course"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_create_new_course"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/course_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_course_name"
+            android:textColorHint="@color/light"
+            app:boxCornerRadiusBottomEnd="@dimen/space_16"
+            app:boxCornerRadiusBottomStart="@dimen/space_16"
+            app:boxCornerRadiusTopEnd="@dimen/space_16"
+            app:boxCornerRadiusTopStart="@dimen/space_16"
+            app:boxStrokeColor="@color/light"
+            app:layout_constraintTop_toBottomOf="@id/shapeableImageView"
+            app:startIconTint="@color/light">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/course_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/space_4"
+            android:hint="@string/grade"
+            android:textColorHint="@color/light"
+            app:boxCornerRadiusBottomEnd="@dimen/space_16"
+            app:boxCornerRadiusBottomStart="@dimen/space_16"
+            app:boxCornerRadiusTopEnd="@dimen/space_16"
+            app:boxCornerRadiusTopStart="@dimen/space_16"
+            app:boxStrokeColor="@color/light"
+            app:layout_constraintEnd_toStartOf="@id/project_grade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/course_name"
+            app:startIconTint="@color/light">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/project_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginTop="16dp"
+            android:hint="@string/project_grade"
+            android:textColorHint="@color/light"
+            app:boxCornerRadiusBottomEnd="@dimen/space_16"
+            app:boxCornerRadiusBottomStart="@dimen/space_16"
+            app:boxCornerRadiusTopEnd="@dimen/space_16"
+            app:boxCornerRadiusTopStart="@dimen/space_16"
+            app:boxStrokeColor="@color/light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/course_grade"
+            app:layout_constraintTop_toBottomOf="@id/course_name"
+            app:startIconTint="@color/light">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/attendance"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginTop="16dp"
+            android:hint="@string/attendance"
+            android:textColorHint="@color/light"
+            app:boxCornerRadiusBottomEnd="@dimen/space_16"
+            app:boxCornerRadiusBottomStart="@dimen/space_16"
+            app:boxCornerRadiusTopEnd="@dimen/space_16"
+            app:boxCornerRadiusTopStart="@dimen/space_16"
+            app:boxStrokeColor="@color/light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/project_grade"
+            app:startIconTint="@color/light">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_16"
+            app:cornerRadius="@dimen/space_12"
+            android:textColor="@color/light"
+            android:text="@string/confirm_to_create_new_course"
+            app:backgroundTint="@color/background_primary"
+            app:layout_constraintTop_toBottomOf="@id/attendance" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

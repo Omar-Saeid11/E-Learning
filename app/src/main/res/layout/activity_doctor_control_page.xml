@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:padding="@dimen/space_16"
+    tools:context=".ui.doctor.DoctorControlPage">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor_control_page"
+        android:textColor="@color/light"
+        android:textSize="@dimen/text_24"
+        app:layout_constraintEnd_toStartOf="@id/pc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/control"
+        app:layout_constraintBottom_toBottomOf="@id/title_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_page" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/attendance"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/space_24"
+        android:background="@drawable/background_new_course"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/quiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pc">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/attandase" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/attendance"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_16" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:gravity="center"
+            android:text="@string/generate_code_to_attendance"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_primary"
+            android:text="@string/open"
+            android:textColor="@color/light"
+            app:cornerRadius="@dimen/space_12" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/quiz"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginTop="@dimen/space_24"
+        android:background="@drawable/background_new_course"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/attendance"
+        app:layout_constraintTop_toBottomOf="@+id/pc">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_quiz_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/quiz"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_16" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/create_new_quiz"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_primary"
+            android:text="@string/open"
+            android:textColor="@color/light"
+            app:cornerRadius="@dimen/space_12" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/material"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginEnd="@dimen/space_8"
+        android:background="@drawable/background_new_course"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/code_course"
+        app:layout_constraintEnd_toStartOf="@+id/grades"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attendance">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_folder_upload_24" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/material"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_16" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/upload_material"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_upload_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_primary"
+            android:text="@string/open"
+            android:textColor="@color/light"
+            app:cornerRadius="@dimen/space_12" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/grades"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="@dimen/space_8"
+        android:background="@drawable/background_new_course"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/code_course"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/attendance"
+        app:layout_constraintTop_toBottomOf="@+id/quiz">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/grades" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/grades"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_16" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_4"
+            android:text="@string/show_grades"
+            android:textColor="@color/light"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_show_grades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_primary"
+            android:text="@string/open"
+            android:textColor="@color/light"
+            app:cornerRadius="@dimen/space_12" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/code_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_new_course"
+        android:drawableStart="@drawable/ic_copy_24"
+        android:padding="@dimen/space_8"
+        android:textColor="@color/light"
+        android:textSize="@dimen/text_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grades"
+        tools:text="#eds45smnfd955" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_8"
+        android:text="@string/course_code"
+        android:textColor="@color/light"
+        android:textSize="@dimen/text_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_course" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:padding="12dp"
+    tools:context=".ui.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/create_account"
+        style="@style/create_an_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_8"
+        android:text="@string/welcome_back"
+        android:textAppearance="@style/create_an_a"
+        app:layout_constraintEnd_toEndOf="@id/img_people"
+        app:layout_constraintStart_toStartOf="@id/img_people"
+        app:layout_constraintTop_toBottomOf="@id/img_people" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/handful"
+        style="@style/a_handful_o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a_handful_o"
+        app:layout_constraintEnd_toEndOf="@id/create_account"
+        app:layout_constraintStart_toStartOf="@id/create_account"
+        app:layout_constraintTop_toBottomOf="@id/create_account" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/email_id"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/light"
+        app:boxCornerRadiusBottomEnd="@dimen/space_16"
+        app:boxCornerRadiusBottomStart="@dimen/space_16"
+        app:boxCornerRadiusTopEnd="@dimen/space_16"
+        app:boxCornerRadiusTopStart="@dimen/space_16"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/light"
+        app:layout_constraintEnd_toStartOf="@+id/fingerprint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:startIconTint="@color/light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fingerprint"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@drawable/strok_finger_print"
+        android:src="@drawable/ic_fingerprint"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@id/email"
+        app:layout_constraintTop_toTopOf="@id/password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:lineSpacingExtra="6sp"
+        android:text="@string/forgot_password"
+        android:textAppearance="@style/forgot_pass"
+        app:layout_constraintEnd_toEndOf="@id/fingerprint"
+        app:layout_constraintTop_toBottomOf="@id/fingerprint" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:backgroundTint="@color/blue"
+        android:padding="@dimen/space_12"
+        android:text="@string/sign_in"
+        app:cornerRadius="@dimen/space_12"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintTop_toBottomOf="@id/forget_password"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/goto_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_12"
+        android:text="@string/don_t_have_an_account_sign_up"
+        android:textColor="@color/light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_sign_in_with_google"
+        app:layout_constraintStart_toStartOf="@id/btn_sign_in_with_google"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_in_with_google" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in_with_google"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:backgroundTint="@android:color/transparent"
+        android:padding="@dimen/space_12"
+        android:text="@string/sign_in_with_google"
+        android:textColor="@color/light"
+        android:textSize="@dimen/text_16"
+        app:cornerRadius="@dimen/space_12"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_in"
+        app:strokeColor="@color/light"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:src="@drawable/google"
+        app:layout_constraintBottom_toBottomOf="@id/btn_sign_in_with_google"
+        app:layout_constraintStart_toStartOf="@id/btn_sign_in_with_google"
+        app:layout_constraintTop_toTopOf="@id/btn_sign_in_with_google" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
